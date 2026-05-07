@@ -13,33 +13,34 @@ const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrai
 export function generateMetadata(): Metadata {
   const t = getTranslations('metadata');
   return {
-    metadataBase: new URL('https://en.draft2live.com'),
+    metadataBase: new URL('https://uk.draft2live.com'),
     icons: { icon: '/favicon.svg' },
     title: t('title'),
     description: t('description'),
+    keywords: t('keywords'),
     alternates: {
       canonical: '/',
     },
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: 'https://en.draft2live.com/',
+      url: 'https://uk.draft2live.com/',
       siteName: 'Draft2Live',
-      locale: 'en_US',
+      locale: 'uk_UA',
       type: 'website',
       images: [{
-        url: '/og-images/og-en-v2.png',
+        url: '/og-images/og-uk-v2.png',
         width: 1200,
         height: 630,
         type: 'image/png',
-        alt: 'Draft2Live — AI-to-CMS publishing',
+        alt: 'Draft2Live — публікація з ШІ напряму у CMS',
       }],
     },
     twitter: {
       card: 'summary_large_image',
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ['/og-images/og-en-v2.png'],
+      images: ['/og-images/og-uk-v2.png'],
     },
   };
 }
@@ -54,8 +55,8 @@ function getJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Draft2Live',
-    url: 'https://en.draft2live.com',
-    logo: 'https://en.draft2live.com/og-images/og-en-v2.png',
+    url: 'https://uk.draft2live.com',
+    logo: 'https://uk.draft2live.com/og-images/og-uk-v2.png',
     description: t('orgDescription'),
   };
 
@@ -89,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const { orgSchema, appSchema, faqSchema } = getJsonLd();
 
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
+    <html lang="uk" className={`${inter.variable} ${jetbrains.variable}`}>
       <body className="noise min-h-screen antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />

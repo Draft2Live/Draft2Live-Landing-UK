@@ -5,8 +5,8 @@ import Link from 'next/link';
 export const dynamic = 'force-static';
 
 export const metadata = {
-  title: 'Cookie Policy | Draft2Live',
-  description: 'Draft2Live Cookie Policy: types of cookies, legal basis, consent management and contact information.',
+  title: 'Політика cookies | Draft2Live',
+  description: 'Політика cookies Draft2Live: типи cookies, правові підстави, керування згодою та контактна інформація.',
 };
 
 export default function CookiesPage() {
@@ -15,126 +15,126 @@ export default function CookiesPage() {
       <Navigation />
       <main className="min-h-screen pt-32 pb-20">
         <article className="max-w-3xl mx-auto px-4 sm:px-6">
-          <Link href="/" className="text-primary text-sm hover:underline mb-8 inline-block">&larr; Back to home</Link>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Cookie Policy</h1>
-          <p className="text-text-muted text-sm mb-12">Last updated: April 10, 2026</p>
+          <Link href="/" className="text-primary text-sm hover:underline mb-8 inline-block">&larr; На головну</Link>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Політика cookies</h1>
+          <p className="text-text-muted text-sm mb-12">Останнє оновлення: 10 квітня 2026</p>
 
           <div className="prose-legal space-y-8 text-text-secondary text-[15px] leading-relaxed">
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">1. What Are Cookies</h2>
-              <p>Cookies are small text files that are stored on your device (computer, tablet, smartphone) when you visit websites. They help the site remember your preferences and improve the functioning of the service.</p>
-              <p>In addition to cookies, we may use similar technologies: pixels, local storage (localStorage) and session identifiers.</p>
+              <h2 className="text-xl font-semibold text-white mb-3">1. Що таке cookies</h2>
+              <p>Cookies — це невеликі текстові файли, які зберігаються на вашому пристрої (комп&apos;ютері, планшеті, смартфоні), коли ви відвідуєте вебсайти. Вони допомагають сайту запам&apos;ятовувати ваші вподобання та покращувати роботу сервісу.</p>
+              <p>Окрім cookies, ми можемо використовувати подібні технології: піксельні теги, локальне сховище (localStorage) та ідентифікатори сесії.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">2. Types of Cookies We Use</h2>
+              <h2 className="text-xl font-semibold text-white mb-3">2. Типи cookies, які ми використовуємо</h2>
 
-              <h3 className="text-white font-medium mt-4 mb-2">Required Cookies (Always Active)</h3>
-              <p>Provide basic functionality of the site. Without them, the Platform cannot operate correctly. These cookies cannot be disabled.</p>
+              <h3 className="text-white font-medium mt-4 mb-2">Необхідні cookies (завжди активні)</h3>
+              <p>Забезпечують базовий функціонал сайту. Без них Платформа не може працювати коректно. Ці cookies неможливо вимкнути.</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm border-collapse my-4 text-left">
                   <thead>
                     <tr>
                       <th className="p-2 border border-border font-semibold text-white">Cookie</th>
-                      <th className="p-2 border border-border font-semibold text-white">Provider</th>
-                      <th className="p-2 border border-border font-semibold text-white">Purpose</th>
-                      <th className="p-2 border border-border font-semibold text-white">Duration</th>
+                      <th className="p-2 border border-border font-semibold text-white">Постачальник</th>
+                      <th className="p-2 border border-border font-semibold text-white">Призначення</th>
+                      <th className="p-2 border border-border font-semibold text-white">Тривалість</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td className="p-2 border border-border">session_id</td>
                       <td className="p-2 border border-border">Draft2Live</td>
-                      <td className="p-2 border border-border">User session identification</td>
-                      <td className="p-2 border border-border">Session</td>
+                      <td className="p-2 border border-border">Ідентифікація сесії користувача</td>
+                      <td className="p-2 border border-border">Сесія</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">csrf_token</td>
                       <td className="p-2 border border-border">Draft2Live</td>
-                      <td className="p-2 border border-border">Protection against CSRF attacks</td>
-                      <td className="p-2 border border-border">Session</td>
+                      <td className="p-2 border border-border">Захист від CSRF-атак</td>
+                      <td className="p-2 border border-border">Сесія</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">auth_token</td>
                       <td className="p-2 border border-border">Draft2Live</td>
-                      <td className="p-2 border border-border">User authentication</td>
-                      <td className="p-2 border border-border">30 days</td>
+                      <td className="p-2 border border-border">Автентифікація користувача</td>
+                      <td className="p-2 border border-border">30 днів</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">cookie_consent</td>
                       <td className="p-2 border border-border">Draft2Live</td>
-                      <td className="p-2 border border-border">Storing cookie preferences</td>
-                      <td className="p-2 border border-border">6 months</td>
+                      <td className="p-2 border border-border">Збереження налаштувань cookies</td>
+                      <td className="p-2 border border-border">6 місяців</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <h3 className="text-white font-medium mt-4 mb-2">Analytics Cookies (Require Consent)</h3>
-              <p>Help us understand how visitors interact with the Platform, enabling us to improve its operation and usability.</p>
+              <h3 className="text-white font-medium mt-4 mb-2">Аналітичні cookies (потребують згоди)</h3>
+              <p>Допомагають нам зрозуміти, як відвідувачі взаємодіють із Платформою, щоб ми могли покращувати її роботу та зручність.</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm border-collapse my-4 text-left">
                   <thead>
                     <tr>
                       <th className="p-2 border border-border font-semibold text-white">Cookie</th>
-                      <th className="p-2 border border-border font-semibold text-white">Provider</th>
-                      <th className="p-2 border border-border font-semibold text-white">Purpose</th>
-                      <th className="p-2 border border-border font-semibold text-white">Duration</th>
+                      <th className="p-2 border border-border font-semibold text-white">Постачальник</th>
+                      <th className="p-2 border border-border font-semibold text-white">Призначення</th>
+                      <th className="p-2 border border-border font-semibold text-white">Тривалість</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td className="p-2 border border-border">_ga</td>
                       <td className="p-2 border border-border">Google</td>
-                      <td className="p-2 border border-border">Identification of unique visitors</td>
-                      <td className="p-2 border border-border">13 months</td>
+                      <td className="p-2 border border-border">Ідентифікація унікальних відвідувачів</td>
+                      <td className="p-2 border border-border">13 місяців</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">_ga_*</td>
                       <td className="p-2 border border-border">Google</td>
-                      <td className="p-2 border border-border">Google Analytics 4 &mdash; session state storage</td>
-                      <td className="p-2 border border-border">13 months</td>
+                      <td className="p-2 border border-border">Google Analytics 4 &mdash; стан сесії</td>
+                      <td className="p-2 border border-border">13 місяців</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">_gid</td>
                       <td className="p-2 border border-border">Google</td>
-                      <td className="p-2 border border-border">Visitor identification within a day</td>
-                      <td className="p-2 border border-border">24 hours</td>
+                      <td className="p-2 border border-border">Ідентифікація відвідувача в межах доби</td>
+                      <td className="p-2 border border-border">24 години</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              <h3 className="text-white font-medium mt-4 mb-2">Marketing Cookies (Require Consent)</h3>
-              <p>Used to display relevant advertising and measure the effectiveness of advertising campaigns.</p>
+              <h3 className="text-white font-medium mt-4 mb-2">Маркетингові cookies (потребують згоди)</h3>
+              <p>Використовуються для показу релевантної реклами та вимірювання ефективності рекламних кампаній.</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm border-collapse my-4 text-left">
                   <thead>
                     <tr>
                       <th className="p-2 border border-border font-semibold text-white">Cookie</th>
-                      <th className="p-2 border border-border font-semibold text-white">Provider</th>
-                      <th className="p-2 border border-border font-semibold text-white">Purpose</th>
-                      <th className="p-2 border border-border font-semibold text-white">Duration</th>
+                      <th className="p-2 border border-border font-semibold text-white">Постачальник</th>
+                      <th className="p-2 border border-border font-semibold text-white">Призначення</th>
+                      <th className="p-2 border border-border font-semibold text-white">Тривалість</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td className="p-2 border border-border">_fbp</td>
                       <td className="p-2 border border-border">Meta</td>
-                      <td className="p-2 border border-border">Conversion tracking</td>
-                      <td className="p-2 border border-border">3 months</td>
+                      <td className="p-2 border border-border">Відстеження конверсій</td>
+                      <td className="p-2 border border-border">3 місяці</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">_gcl_au</td>
                       <td className="p-2 border border-border">Google</td>
-                      <td className="p-2 border border-border">Google Ads &mdash; conversion tracking</td>
-                      <td className="p-2 border border-border">3 months</td>
+                      <td className="p-2 border border-border">Google Ads &mdash; відстеження конверсій</td>
+                      <td className="p-2 border border-border">3 місяці</td>
                     </tr>
                     <tr>
                       <td className="p-2 border border-border">li_sugr</td>
                       <td className="p-2 border border-border">LinkedIn</td>
-                      <td className="p-2 border border-border">Insight Tag &mdash; advertising analytics</td>
-                      <td className="p-2 border border-border">3 months</td>
+                      <td className="p-2 border border-border">Insight Tag &mdash; рекламна аналітика</td>
+                      <td className="p-2 border border-border">3 місяці</td>
                     </tr>
                   </tbody>
                 </table>
@@ -142,50 +142,50 @@ export default function CookiesPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">3. Legal Basis</h2>
-              <p>In accordance with the ePrivacy Directive (2002/58/EC) and the GDPR:</p>
+              <h2 className="text-xl font-semibold text-white mb-3">3. Правова підстава</h2>
+              <p>Відповідно до ePrivacy Directive (2002/58/EC) та GDPR:</p>
               <ul className="list-disc pl-6 space-y-2 mt-2">
-                <li><strong className="text-white">Required cookies</strong> are set without consent, as they are necessary for the functioning of the Platform (Art. 6(1)(f) GDPR)</li>
-                <li><strong className="text-white">Analytics and marketing cookies</strong> are set only after obtaining your explicit consent (Art. 6(1)(a) GDPR)</li>
+                <li><strong className="text-white">Необхідні cookies</strong> встановлюються без згоди, оскільки вони потрібні для функціонування Платформи (ст. 6(1)(f) GDPR)</li>
+                <li><strong className="text-white">Аналітичні та маркетингові cookies</strong> встановлюються лише після отримання вашої явної згоди (ст. 6(1)(a) GDPR)</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">4. Managing Cookies</h2>
+              <h2 className="text-xl font-semibold text-white mb-3">4. Керування cookies</h2>
 
-              <h3 className="text-white font-medium mt-4 mb-2">4.1. Consent Banner</h3>
-              <p>Upon your first visit to the Platform, you are shown a banner requesting consent. You may accept all cookies, reject non-essential ones or configure categories manually. <strong className="text-white">Refusing cookies is just as easy as accepting them.</strong> You may change your choice at any time in the Platform settings.</p>
-              <p><strong className="text-white">Consequences of refusal:</strong> Refusing analytics and marketing cookies does not affect the functionality of the Platform. You will be able to use all Services. However, we shall not be able to personalise your experience or display relevant advertising.</p>
+              <h3 className="text-white font-medium mt-4 mb-2">4.1. Банер згоди</h3>
+              <p>Під час першого відвідування Платформи вам показується банер із запитом згоди. Ви можете прийняти всі cookies, відхилити неосновні або налаштувати категорії вручну. <strong className="text-white">Відмовитися від cookies так само просто, як і прийняти їх.</strong> Ви можете змінити свій вибір будь-коли в налаштуваннях Платформи.</p>
+              <p><strong className="text-white">Наслідки відмови:</strong> відмова від аналітичних і маркетингових cookies не впливає на функціонал Платформи. Ви зможете користуватися всіма Послугами. Однак ми не зможемо персоналізувати ваш досвід або показувати релевантну рекламу.</p>
 
-              <h3 className="text-white font-medium mt-4 mb-2">4.2. Browser Settings</h3>
-              <p>You may configure your browser to block or delete cookies. Please note that blocking required cookies may affect the operation of the Platform.</p>
+              <h3 className="text-white font-medium mt-4 mb-2">4.2. Налаштування браузера</h3>
+              <p>Ви можете налаштувати свій браузер так, щоб блокувати або видаляти cookies. Зверніть увагу, що блокування необхідних cookies може вплинути на роботу Платформи.</p>
               <ul className="list-disc pl-6 space-y-2 mt-2">
-                <li><strong className="text-white">Chrome:</strong> Settings &rarr; Privacy and security &rarr; Cookies</li>
-                <li><strong className="text-white">Firefox:</strong> Settings &rarr; Privacy &amp; Security &rarr; Cookies</li>
-                <li><strong className="text-white">Safari:</strong> Preferences &rarr; Privacy &rarr; Cookies</li>
-                <li><strong className="text-white">Edge:</strong> Settings &rarr; Privacy &rarr; Cookies</li>
+                <li><strong className="text-white">Chrome:</strong> Налаштування &rarr; Конфіденційність і безпека &rarr; Cookies</li>
+                <li><strong className="text-white">Firefox:</strong> Налаштування &rarr; Приватність і безпека &rarr; Cookies</li>
+                <li><strong className="text-white">Safari:</strong> Налаштування &rarr; Конфіденційність &rarr; Cookies</li>
+                <li><strong className="text-white">Edge:</strong> Налаштування &rarr; Конфіденційність &rarr; Cookies</li>
               </ul>
 
-              <h3 className="text-white font-medium mt-4 mb-2">4.3. Opting Out of Analytics</h3>
-              <p>To opt out of Google Analytics, you may install the official browser extension: Google Analytics Opt-out Browser Add-on.</p>
+              <h3 className="text-white font-medium mt-4 mb-2">4.3. Відмова від аналітики</h3>
+              <p>Щоб відмовитися від Google Analytics, ви можете встановити офіційне розширення браузера: Google Analytics Opt-out Browser Add-on.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">5. Data Transfer</h2>
-              <p>Some cookies are set by third-party services whose servers are located outside the EEA. In such cases, we ensure an adequate level of data protection in accordance with the GDPR (see <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link>, section 6 for details).</p>
+              <h2 className="text-xl font-semibold text-white mb-3">5. Передача даних</h2>
+              <p>Деякі cookies встановлюються сторонними сервісами, чиї сервери розташовані за межами ЄЕЗ. У таких випадках ми забезпечуємо належний рівень захисту даних відповідно до GDPR (детальніше — у <Link href="/privacy" className="text-primary hover:underline">Політиці конфіденційності</Link>, розділ 6).</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">6. Amendments to the Policy</h2>
-              <p>Cookie lifetimes do not exceed 13 months, in line with EDPB recommendations. Upon expiry, your consent will be requested again.</p>
-              <p>We may update this Cookie Policy in the event of changes to the types or purposes of cookies used. We shall notify you of material changes via the consent banner or the Platform interface.</p>
+              <h2 className="text-xl font-semibold text-white mb-3">6. Зміни до Політики</h2>
+              <p>Тривалість дії cookies не перевищує 13 місяців відповідно до рекомендацій EDPB. Після закінчення цього терміну згода буде запитана повторно.</p>
+              <p>Ми можемо оновлювати цю Політику cookies у разі зміни типів або цілей використовуваних cookies. Про суттєві зміни ми повідомимо вас через банер згоди або інтерфейс Платформи.</p>
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold text-white mb-3">7. Contact</h2>
+              <h2 className="text-xl font-semibold text-white mb-3">7. Контакти</h2>
               <p><strong className="text-white">Aklima Polska sp. z o.o.</strong></p>
               <p>Email: <a href="mailto:info@draft2live.ai" className="text-primary hover:underline">info@draft2live.ai</a></p>
-              <p>Website: <a href="https://draft2live.ai" className="text-primary hover:underline">draft2live.ai</a></p>
+              <p>Сайт: <a href="https://draft2live.ai" className="text-primary hover:underline">draft2live.ai</a></p>
             </section>
           </div>
         </article>

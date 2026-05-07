@@ -10,7 +10,7 @@ import type { MetadataRoute } from 'next';
 // fails with "export const dynamic = 'force-static' not configured" error.
 export const dynamic = 'force-static';
 
-const baseUrl = 'https://en.draft2live.com';
+const baseUrl = 'https://uk.draft2live.com';
 
 // Public routes. Add new public routes here when we publish new pages
 // (e.g. /case-study, /vs/surfer-seo).
