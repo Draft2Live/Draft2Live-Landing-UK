@@ -58,7 +58,7 @@ export default function Metrics() {
     { target: 5000, suffix: '+', label: t('items.0.label') },
     { target: 10, suffix: '+', label: t('items.1.label') },
     { target: 45, label: t('items.2.label') },
-    { target: 0, suffix: t('items.3.suffix'), label: t('items.3.label') },
+    { target: 0, label: t('items.3.label') },
   ];
 
   return (
