@@ -33,7 +33,7 @@ export function generateMetadata(): Metadata {
         width: 1200,
         height: 630,
         type: 'image/png',
-        alt: 'Draft2Live — публікація з ШІ напряму у CMS',
+        alt: 'Draft2Live — публікація з ШІ безпосередньо у CMS',
       }],
     },
     twitter: {
