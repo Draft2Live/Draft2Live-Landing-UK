@@ -272,7 +272,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading leading-[1.08]"
+            className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-heading leading-[1.08]"
             style={{ letterSpacing: '-0.03em' }}
           >
             <span className="block">{t('titleLine1')}</span>
@@ -280,7 +280,7 @@ export default function Hero() {
               {/* Prefix + dynamic word as ONE inline-block unit — prevents
                   "do" from orphaning on its own line on narrow viewports
                   (e.g. PL where titleLine1 is already ~19ch wide). */}
-              <span className="inline-block text-left text-balance max-w-full" style={{ minWidth: '14ch' }}>
+              <span className="inline-block text-left whitespace-nowrap" style={{ minWidth: '14ch' }}>
                 {t('titleLine2Prefix')}{' '}
                 <span className="gradient-text">{text}</span>
                 <span className="typing-cursor" />
