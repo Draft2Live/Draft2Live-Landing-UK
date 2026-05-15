@@ -479,14 +479,27 @@ export default function Features() {
     setActive((prev) => (prev + 1) % featureMeta.length);
   }, []);
 
+  // Track viewport so we ONLY auto-cycle on desktop (lg+ has tab layout with
+  // a fixed-height right panel; mobile uses an accordion where each expand/collapse
+  // would push the page below up and down — bad UX).
+  const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
+    const mql = window.matchMedia('(min-width: 1024px)');
+    const update = () => setIsDesktop(mql.matches);
+    update();
+    mql.addEventListener('change', update);
+    return () => mql.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return; // No auto-cycle on mobile/tablet — user controls accordion.
     if (userInteracted) {
       const reset = setTimeout(() => setUserInteracted(false), 10000);
       return () => clearTimeout(reset);
     }
     const timer = setInterval(next, AUTO_INTERVAL);
     return () => clearInterval(timer);
-  }, [next, userInteracted]);
+  }, [next, userInteracted, isDesktop]);
 
   const handleClick = (i: number) => {
     setActive(i);
@@ -609,9 +622,9 @@ export default function Features() {
                 })}
               </div>
 
-              {/* Auto-play progress bar */}
-              {!userInteracted && (
-                <div className="mt-4 lg:ml-5 h-0.5 bg-white/5 rounded-full overflow-hidden">
+              {/* Auto-play progress bar — desktop only (no auto-cycle on mobile) */}
+              {isDesktop && !userInteracted && (
+                <div className="hidden lg:block mt-4 lg:ml-5 h-0.5 bg-white/5 rounded-full overflow-hidden">
                   <motion.div
                     key={active}
                     className="h-full bg-teal-500/40 rounded-full"
