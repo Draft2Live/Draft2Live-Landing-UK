@@ -105,6 +105,11 @@ gtag('js', new Date());
 gtag('config', '${GA4_ID}');`,
           }}
         />
+        {/* CookieYes consent banner — GDPR/CCPA compliance */}
+        <script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/57cfa5d01d5a8fe30a54bd3e2d6142cd/script.js"
+        />
       </head>
       <body className="noise min-h-screen antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
