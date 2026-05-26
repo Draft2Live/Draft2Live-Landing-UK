@@ -281,8 +281,8 @@ export default function Hero() {
                 overflow:hidden prevents any spillover, so the form below stays still.
                 Mobile: 2.6em (fits worst-case wrap to 2 lines + buffer).
                 Desktop: 1.15em (everything fits on 1 line at sm: and up). */}
-            <span className="block overflow-hidden h-[2.6em] sm:h-[1.15em]">
-              <span className="inline-block text-left whitespace-nowrap" style={{ minWidth: '14ch' }}>
+            <span className="block min-h-[2.4em] sm:min-h-[1.15em]">
+              <span className="inline-block text-left" style={{ minWidth: '14ch' }}>
                 {t('titleLine2Prefix')}{' '}
                 <span className="gradient-text">{text}</span>
                 <span className="typing-cursor" />
