@@ -86,11 +86,26 @@ function getJsonLd() {
   return { orgSchema, appSchema, faqSchema };
 }
 
+// GA4 config — single property for all 4 landings (en/pl/ru/uk)
+const GA4_ID = 'G-EBJ3K1VBF4';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const { orgSchema, appSchema, faqSchema } = getJsonLd();
 
   return (
     <html lang="uk" className={`${inter.variable} ${jetbrains.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) — first thing in <head>, on every page incl. nested routes */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_ID}');`,
+          }}
+        />
+      </head>
       <body className="noise min-h-screen antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }} />
