@@ -95,20 +95,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="uk" className={`${inter.variable} ${jetbrains.variable}`}>
       <head>
-        {/* Google tag (gtag.js) — first thing in <head>, on every page incl. nested routes */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />
+        {/* 1. CookieYes consent banner — MUST load FIRST so it can gate GA4 until user consents */}
         <script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/57cfa5d01d5a8fe30a54bd3e2d6142cd/script.js"
+        />
+        {/* 2. Google tag (gtag.js) — gated by CookieYes via type="text/plain" + data-cookieyes="cookieyes-analytics".
+            Scripts won't execute until user accepts the Analytics category in the consent banner. CookieYes then
+            swaps type to text/javascript automatically. No analytics data is sent before consent. */}
+        <script
+          type="text/plain"
+          data-cookieyes="cookieyes-analytics"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+        />
+        <script
+          type="text/plain"
+          data-cookieyes="cookieyes-analytics"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${GA4_ID}');`,
           }}
-        />
-        {/* CookieYes consent banner — GDPR/CCPA compliance */}
-        <script
-          id="cookieyes"
-          src="https://cdn-cookieyes.com/client_data/57cfa5d01d5a8fe30a54bd3e2d6142cd/script.js"
         />
       </head>
       <body className="noise min-h-screen antialiased">
