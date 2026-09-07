@@ -24,7 +24,7 @@ export default function TermsPage() {
             {/* §1 */}
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">&sect;1. Загальні положення</h2>
-              <p>1. Ці Умови використання (далі — &laquo;Умови&raquo;) визначають типи, обсяг і умови надання електронних послуг компанією Aklima Polska sp. z o.o., із зареєстрованим офісом у Варшаві за адресою ul. Postępu 15, 02-676 Warszawa, Polska, що внесена до Реєстру підприємців Національного судового реєстру за номером KRS: 0000978391, NIP: 9512544995, REGON: 522520422, статутний капітал: 10 000 PLN (далі — &laquo;Оператор&raquo;, &laquo;ми&raquo;), через сайт draft2live.ai та всі пов&apos;язані піддомени й застосунки (далі — &laquo;Платформа&raquo;). Ці Умови є регламентом у розумінні польського Закону від 18 липня 2002 року про надання послуг електронним способом.</p>
+              <p>1. Ці Умови використання (далі — &laquo;Умови&raquo;) визначають типи, обсяг і умови надання електронних послуг компанією Myicode sp. z o.o., із зареєстрованим офісом у Варшаві за адресою ul. Postępu 15, 02-676 Warszawa, Polska, NIP: 5214167154 (далі — &laquo;Оператор&raquo;, &laquo;ми&raquo;), через сайт draft2live.ai та всі пов&apos;язані піддомени й застосунки (далі — &laquo;Платформа&raquo;). Ці Умови є регламентом у розумінні польського Закону від 18 липня 2002 року про надання послуг електронним способом.</p>
               <p className="mt-3">2. Реєструючись або користуючись Платформою, ви підтверджуєте, що ознайомилися з цими Умовами, <Link href="/privacy" className="text-primary hover:underline">Політикою конфіденційності</Link> та <Link href="/cookies" className="text-primary hover:underline">Політикою cookies</Link> і погоджуєтеся їх дотримуватися.</p>
             </section>
 
@@ -33,7 +33,7 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-white mb-3">&sect;2. Визначення</h2>
               <ul className="space-y-2">
                 <li><strong className="text-white">Платформа</strong> &mdash; сайт за адресою draft2live.ai, включно з усіма піддоменами та застосунками, через які Оператор надає Послуги.</li>
-                <li><strong className="text-white">Оператор</strong> &mdash; Aklima Polska sp. z o.o., ul. Postępu 15, 02-676 Warszawa, KRS: 0000978391, NIP: 9512544995, REGON: 522520422, що адмініструє Платформу.</li>
+                <li><strong className="text-white">Оператор</strong> &mdash; Myicode sp. z o.o., ul. Postępu 15, 02-676 Warszawa, NIP: 5214167154, що адмініструє Платформу.</li>
                 <li><strong className="text-white">Користувач</strong> &mdash; фізична особа віком від 18 років, фізична особа-підприємець, юридична особа або організаційна одиниця без статусу юридичної особи, яка користується Платформою.</li>
                 <li><strong className="text-white">Акаунт</strong> &mdash; набір ресурсів в ІТ-системі Оператора, що ідентифікується індивідуальним логіном (email) і паролем, у якому зберігаються дані Користувача.</li>
                 <li><strong className="text-white">Договір</strong> &mdash; договір про надання послуг, укладений між Оператором і Користувачем через Платформу на невизначений строк відповідно до цих Умов.</li>
@@ -120,7 +120,7 @@ export default function TermsPage() {
             {/* §8 */}
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">&sect;8. Інтелектуальна власність</h2>
-              <p>1. Усі права на Платформу, включно з її дизайном, програмним забезпеченням, торговельними марками, логотипами та іншими матеріалами, належать Aklima Polska sp. z o.o. або її ліцензіарам.</p>
+              <p>1. Усі права на Платформу, включно з її дизайном, програмним забезпеченням, торговельними марками, логотипами та іншими матеріалами, належать Myicode sp. z o.o. або її ліцензіарам.</p>
               <p className="mt-3">2. Копіювання, модифікація, поширення або використання матеріалів Платформи в комерційних чи рекламних цілях без письмової згоди Оператора заборонено.</p>
               <p className="mt-3">3. <strong className="text-white">Контент Користувача:</strong> Користувач зберігає права на контент, згенерований через Платформу, за умови дотримання цих Умов і оплати застосовного тарифного плану.</p>
               <p className="mt-3">4. <strong className="text-white">Завантажені матеріали:</strong> завантажуючи документи до Бази знань, Користувач гарантує, що володіє необхідними правами на такі матеріали.</p>
@@ -176,7 +176,7 @@ export default function TermsPage() {
               <h2 className="text-xl font-semibold text-white mb-3">&sect;13. Захист персональних даних</h2>
               <p>1. Детальні умови захисту персональних даних викладено в <Link href="/privacy" className="text-primary hover:underline">Політиці конфіденційності</Link>.</p>
               <p className="mt-3">2. Обробка персональних даних регулюється положеннями Регламенту (ЄС) 2016/679 (GDPR) та польського Закону про захист персональних даних від 10 травня 2018 року.</p>
-              <p className="mt-3">3. Контролером персональних даних є Aklima Polska sp. z o.o.</p>
+              <p className="mt-3">3. Контролером персональних даних є Myicode sp. z o.o.</p>
             </section>
 
             {/* §14 */}
@@ -198,9 +198,9 @@ export default function TermsPage() {
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">&sect;16. Контакти</h2>
               <ul className="list-none mt-3 space-y-1.5">
-                <li><strong className="text-white">Оператор:</strong> Aklima Polska sp. z o.o.</li>
+                <li><strong className="text-white">Оператор:</strong> Myicode sp. z o.o.</li>
                 <li><strong className="text-white">Адреса:</strong> ul. Postępu 15, 02-676 Warszawa, Polska</li>
-                <li><strong className="text-white">KRS:</strong> 0000978391 | <strong className="text-white">NIP:</strong> 9512544995 | <strong className="text-white">REGON:</strong> 522520422</li>
+                <li><strong className="text-white">NIP:</strong> 5214167154</li>
                 <li><strong className="text-white">Email:</strong> <a href="mailto:info@draft2live.ai" className="text-primary hover:underline">info@draft2live.ai</a></li>
                 <li><strong className="text-white">Сайт:</strong> <a href="https://draft2live.ai" className="text-primary hover:underline">draft2live.ai</a></li>
               </ul>

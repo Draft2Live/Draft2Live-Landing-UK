@@ -22,16 +22,16 @@ export default function PrivacyPage() {
           <div className="prose-legal space-y-8 text-text-secondary text-[15px] leading-relaxed">
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">1. Загальні положення</h2>
-              <p>Ця Політика конфіденційності пояснює, як компанія Aklima Polska sp. z o.o., із зареєстрованим офісом у Варшаві (ul. Postępu 15, 02-676 Warszawa, KRS: 0000978391, NIP: 9512544995, REGON: 522520422) (далі — &laquo;Оператор&raquo;, &laquo;ми&raquo;), яка керує платформою Draft2Live (далі — &laquo;Платформа&raquo;), збирає, обробляє, зберігає та захищає ваші персональні дані відповідно до Загального регламенту про захист даних (Регламент (ЄС) 2016/679, далі — &laquo;GDPR&raquo;) та польського Закону про захист персональних даних від 10 травня 2018 року.</p>
+              <p>Ця Політика конфіденційності пояснює, як компанія Myicode sp. z o.o., із зареєстрованим офісом у Варшаві (ul. Postępu 15, 02-676 Warszawa, NIP: 5214167154) (далі — &laquo;Оператор&raquo;, &laquo;ми&raquo;), яка керує платформою Draft2Live (далі — &laquo;Платформа&raquo;), збирає, обробляє, зберігає та захищає ваші персональні дані відповідно до Загального регламенту про захист даних (Регламент (ЄС) 2016/679, далі — &laquo;GDPR&raquo;) та польського Закону про захист персональних даних від 10 травня 2018 року.</p>
               <p className="mt-3">Користуючись Платформою, ви підтверджуєте, що ознайомилися з цією Політикою. Якщо ви не згодні з умовами обробки даних, будь ласка, не користуйтеся Платформою.</p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">2. Контролер даних</h2>
               <div className="p-4 rounded-xl bg-white/5 border border-border">
-                <p><strong className="text-white">Aklima Polska sp. z o.o.</strong></p>
+                <p><strong className="text-white">Myicode sp. z o.o.</strong></p>
                 <p className="mt-1">ul. Postępu 15, 02-676 Warszawa, Polska</p>
-                <p className="mt-1">KRS: 0000978391 | NIP: 9512544995 | REGON: 522520422</p>
+                <p className="mt-1">NIP: 5214167154</p>
                 <p className="mt-1">Платформа: Draft2Live</p>
                 <p className="mt-1">Email: <a href="mailto:info@draft2live.ai" className="text-primary hover:underline">info@draft2live.ai</a></p>
                 <p className="mt-1">Сайт: <a href="https://draft2live.ai" className="text-primary hover:underline">draft2live.ai</a></p>
@@ -276,7 +276,7 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">14. Контакти</h2>
               <div className="p-4 rounded-xl bg-white/5 border border-border">
-                <p><strong className="text-white">Aklima Polska sp. z o.o.</strong></p>
+                <p><strong className="text-white">Myicode sp. z o.o.</strong></p>
                 <p className="mt-1">ul. Postępu 15, 02-676 Warszawa, Polska</p>
                 <p className="mt-1">Email: <a href="mailto:info@draft2live.ai" className="text-primary hover:underline">info@draft2live.ai</a></p>
                 <p className="mt-1">Сайт: <a href="https://draft2live.ai" className="text-primary hover:underline">draft2live.ai</a></p>

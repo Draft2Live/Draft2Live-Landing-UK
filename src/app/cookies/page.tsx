@@ -183,7 +183,7 @@ export default function CookiesPage() {
 
             <section>
               <h2 className="text-xl font-semibold text-white mb-3">7. Контакти</h2>
-              <p><strong className="text-white">Aklima Polska sp. z o.o.</strong></p>
+              <p><strong className="text-white">Myicode sp. z o.o.</strong></p>
               <p>Email: <a href="mailto:info@draft2live.ai" className="text-primary hover:underline">info@draft2live.ai</a></p>
               <p>Сайт: <a href="https://draft2live.ai" className="text-primary hover:underline">draft2live.ai</a></p>
             </section>
