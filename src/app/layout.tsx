@@ -66,7 +66,7 @@ function getJsonLd() {
     name: 'Draft2Live',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    offers: { '@type': 'AggregateOffer', lowPrice: '0', highPrice: '399', priceCurrency: 'EUR', offerCount: '4' },
+    offers: { '@type': 'AggregateOffer', lowPrice: '0', highPrice: '149', priceCurrency: 'EUR', offerCount: '3' },
     // aggregateRating removed: we don't have verified ratings from a reputable source yet.
     // Adding fake ratings to schema violates Google's structured data guidelines and can
     // result in manual action. Will be re-added once we have G2/Capterra/Trustpilot reviews.

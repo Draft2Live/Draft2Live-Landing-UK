@@ -64,8 +64,8 @@ const featureMeta: { icon: React.ReactNode; gradient: string }[] = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/>
-        <path d="M7 7h.01"/>
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <path d="M3 9h18"/><path d="M9 21V9"/>
       </svg>
     ),
     gradient: 'from-teal-500/15 to-teal-400/10',
@@ -382,49 +382,60 @@ function KnowledgeBaseVisual() {
   );
 }
 
-/* ── White-label Visual ── */
-function WhiteLabelVisual() {
-  const t = getTranslations('features.visuals.whiteLabel');
-  // Brand names are locale-aware — UA suffix belongs on UK landing only.
-  // Styling (colors) stays in code; only the name/URL varies per locale.
-  const names = t.raw('brands') as string[];
+/* ── Site Builder Visual ── */
+// This card used to sell "white-label for agencies", which the product has
+// never had. The site builder is real, on every plan, and it is where
+// autoposting to social networks lives — so it takes the slot.
+function SiteBuilderVisual() {
+  const t = getTranslations('features.visuals.siteBuilder');
+  const sites = t.raw('sites') as { name: string; domain: string }[];
   const styles = [
     { color: 'bg-teal-500', accent: 'border-teal-500/30' },
     { color: 'bg-[#002365]', accent: 'border-[#002365]/30' },
     { color: 'bg-[#e1e1e1]', accent: 'border-[#e1e1e1]/30' },
   ];
-  const brands = names.map((name, i) => ({ name, ...styles[i % styles.length] }));
   return (
     <div className="relative h-full w-full rounded-2xl overflow-hidden bg-surface/50 border border-border/40 p-5 md:p-6">
       <div className="absolute w-48 h-48 rounded-full bg-teal-500/10 blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       <div className="relative space-y-3">
         <div className="text-[10px] text-text-muted uppercase tracking-wider">{t('title')}</div>
-        {/* Brand cards */}
-        {brands.map((brand, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.15 }}
-            className={`bg-white/[0.03] border ${brand.accent} rounded-lg p-3`}
-          >
-            <div className="flex items-center gap-2.5">
-              <div className={`w-7 h-7 rounded-lg ${brand.color}/20 flex items-center justify-center`}>
-                <div className={`w-3 h-3 rounded ${brand.color}`} />
+        {sites.map((site, i) => {
+          const style = styles[i % styles.length];
+          return (
+            <motion.div
+              key={site.domain}
+              initial={{ opacity: 0, x: 10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.15 }}
+              className={`bg-white/[0.03] border ${style.accent} rounded-lg p-3`}
+            >
+              <div className="flex items-center gap-2.5">
+                <div className={`w-7 h-7 rounded-lg ${style.color}/20 flex items-center justify-center`}>
+                  <div className={`w-3 h-3 rounded ${style.color}`} />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-white text-xs font-normal truncate">{site.name}</p>
+                  <p className="text-text-muted text-[10px] truncate">{site.domain}</p>
+                </div>
+                <span className="ml-auto flex items-center gap-1.5 text-teal-400 text-[10px]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+                  {t('status')}
+                </span>
               </div>
-              <div>
-                <p className="text-white text-xs font-normal">{brand.name}</p>
-                <p className="text-text-muted text-[10px]">app.{brand.name.toLowerCase().replace(/\s/g, '')}.com</p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
+        <div className="flex items-center gap-2 pt-1">
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
+          <span className="text-[10px] text-text-muted">{t('channels')}</span>
+          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent" />
+        </div>
       </div>
     </div>
   );
 }
 
-const featureVisuals = [SerpVisual, BrandVoiceVisual, SeoAuditVisual, CmsPublishVisual, KnowledgeBaseVisual, WhiteLabelVisual];
+const featureVisuals = [SerpVisual, BrandVoiceVisual, SeoAuditVisual, CmsPublishVisual, KnowledgeBaseVisual, SiteBuilderVisual];
 
 function FeatureVisual({ index }: { index: number }) {
   const Visual = featureVisuals[index];

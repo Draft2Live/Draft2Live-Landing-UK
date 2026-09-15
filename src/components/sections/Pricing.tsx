@@ -49,7 +49,7 @@ const planMeta: {
     id: 'connect',
     name: 'Connect',
     monthlyPrice: 49,
-    annualPrice: 39,
+    annualPrice: 41,
     featured: true,
     ctaVariant: 'primary',
     hasBadge: true,
@@ -58,7 +58,7 @@ const planMeta: {
     id: 'team',
     name: 'Team',
     monthlyPrice: 149,
-    annualPrice: 119,
+    annualPrice: 124,
     ctaVariant: 'secondary',
   },
   {
@@ -237,6 +237,11 @@ export default function Pricing() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Translations are counted as articles; say so before the limit does. */}
+          <motion.p variants={fadeInUp} className="mt-10 text-center text-text-muted text-sm">
+            {t('note')}
+          </motion.p>
         </motion.div>
       </div>
     </section>

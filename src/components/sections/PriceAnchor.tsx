@@ -5,13 +5,17 @@ import { getTranslations } from '@/lib/translations';
 import { fadeInLeft, fadeInRight, staggerContainer } from '@/lib/animations';
 import SectionHeader from '@/components/ui/SectionHeader';
 
+// Monthly list prices checked on each vendor's pricing page in September
+// 2026 (priceAnchor.priceNote says so on the page). Jasper sells in USD
+// only — $69 is shown as ≈ €63. DeepL Pro (price not confirmable on its own
+// page) and the WP SEO plugins (Draft2Live writes Yoast meta but does not
+// replace the plugin) were dropped. Totals are computed from this list.
 const competitorMeta = [
-  { name: 'Semrush', price: 129 },
-  { name: 'SurferSEO', price: 89 },
-  { name: 'Jasper', price: 59 },
-  { name: 'DeepL Pro', price: 25 },
-  { name: 'WP plugins (Yoast, RankMath)', price: 26 },
+  { price: 134 },
+  { price: 59 },
+  { price: 63 },
 ];
+const D2L_PRICE = 49;
 
 export default function PriceAnchor() {
   const t = getTranslations('priceAnchor');
@@ -23,11 +27,13 @@ export default function PriceAnchor() {
     desc: t(`competitors.${i}.desc`),
   }));
   const total = competitors.reduce((sum, c) => sum + c.price, 0);
+  const savings = total - D2L_PRICE;
+  const number = new Intl.NumberFormat('uk');
 
   return (
     <section className="relative py-20 md:py-28 section-teal" ref={ref}>
       <div className="mx-auto max-w-[1640px] px-6">
-        <SectionHeader badge={t('header.badge')} title={t('header.title')} />
+        <SectionHeader badge={t('header.badge')} title={t('header.title', { total: number.format(total) })} />
 
         <motion.div initial="hidden" animate={isInView ? 'visible' : 'hidden'} variants={staggerContainer}
           className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -47,17 +53,18 @@ export default function PriceAnchor() {
               <span className="text-text-secondary font-bold">{t('totalLabel')}</span>
               <span className="font-mono text-2xl font-bold text-[#e1e1e1] line-through">€{total}{t('perMonth')}</span>
             </div>
+            <p className="text-xs text-text-muted">{t('priceNote')}</p>
           </motion.div>
 
           {/* Draft2Live */}
           <motion.div variants={fadeInRight} className="relative">
             <div className="pricing-featured rounded-2xl p-8 md:p-12 text-center">
               <div className="text-sm uppercase tracking-widest text-teal-300 mb-2">{t('d2l.eyebrow')}</div>
-              <div className="text-6xl md:text-7xl font-black font-mono gradient-text" style={{ letterSpacing: '-0.04em' }}>€49</div>
+              <div className="text-6xl md:text-7xl font-black font-mono gradient-text" style={{ letterSpacing: '-0.04em' }}>€{D2L_PRICE}</div>
               <div className="text-text-secondary mt-1">{t('d2l.priceSuffix')}</div>
               <div className="mt-6 inline-block px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20">
                 <span className="text-teal-300 font-bold text-sm">
-                  {t('d2l.savings')}
+                  {t('d2l.savings', { savings: number.format(savings), yearly: number.format(savings * 12) })}
                 </span>
               </div>
             </div>
