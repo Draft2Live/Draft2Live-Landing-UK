@@ -2,7 +2,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { getTranslations } from '@/lib/translations';
-import { staggerContainer, fadeInUp, easeOutExpo } from '@/lib/animations';
+import { easeOutExpo } from '@/lib/animations';
 
 interface MetricProps {
   target: number;
@@ -36,7 +36,7 @@ function AnimatedCounter({ target, prefix = '', suffix = '', label, triggered }:
   }, [triggered, target]);
 
   return (
-    <motion.div variants={fadeInUp} className="text-center">
+    <div className="text-center">
       <motion.div
         animate={finished ? { scale: [1, 1.12, 1] } : {}}
         transition={finished ? { duration: 0.4, ease: [0.34, 1.56, 0.64, 1] } : {}}
@@ -45,13 +45,13 @@ function AnimatedCounter({ target, prefix = '', suffix = '', label, triggered }:
         {prefix}{value.toLocaleString()}{suffix}
       </motion.div>
       <div className="mt-2 text-xs uppercase tracking-widest text-text-muted">{label}</div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function Metrics() {
   const t = getTranslations('metrics');
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const metrics = [
@@ -64,13 +64,15 @@ export default function Metrics() {
   return (
     <section className="relative py-12 md:py-16 section-glow-divider section-darker">
       <div className="mx-auto max-w-[1640px] px-6">
-        <motion.div ref={ref} initial="hidden" animate={isInView ? 'visible' : 'hidden'}
-          variants={staggerContainer}
+        {/* Plain elements, not a motion container that starts hidden: the row
+            was an empty gap until useInView fired, and stayed one when it never
+            did. The numbers start at 0 and count up once the row is in view. */}
+        <div ref={ref}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {metrics.map((m, i) => (
             <AnimatedCounter key={i} {...m} triggered={isInView} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
